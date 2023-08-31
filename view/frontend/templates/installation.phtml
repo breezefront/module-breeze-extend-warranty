@@ -1,0 +1,20 @@
+<?php
+    $blockTemplateFile = $block->getTemplateFile('Extend_Warranty::installation.phtml');
+?>
+<?= str_replace(
+    [
+        '<script>',
+        'require.config(',
+        "require(['extendSdk']",
+        'Extend.config({',
+        'window.Extend = Extend;'
+    ],
+    [
+        '<script data-breeze>',
+        '(window.configExtenWarranty = ',
+        'require([window.configExtenWarranty.paths.extendSdk + ".js"]',
+        'window.Extend.config({',
+        '$.breezemap.extendSdk = window.Extend;'
+    ],
+    $block->fetchView($blockTemplateFile))
+?>

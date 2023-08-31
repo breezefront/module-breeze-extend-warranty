@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="breeze.js">
+            <arguments>
+                <argument name="bundles" xsi:type="array">
+                    <item name="default" xsi:type="array">
+                        <item name="items" xsi:type="array">
+
+                            <item name="extendWarrantyOffers" xsi:type="string">
+                                Extend_Warranty/js/warranty-offers-base
+                            </item>
+                            <!-- <item name="extendWarrantyOffers__register" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/warranty-offers-base__register
+                            </item> -->
+
+                            <item name="Extend_Warranty/js/sidebar-mixin" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/sidebar-mixin
+                            </item>
+
+                            <item name="Extend_Warranty/js/extendtrk/actions__component" xsi:type="string">
+                                Extend_Warranty/js/extendtrk/actions
+                            </item>
+                            <item name="Extend_Warranty/js/extendtrk/actions__register" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/extendtrk/actions__register
+                            </item>
+
+                            <item name="cartItemWarranty__component" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/cart/cart-item-warranty
+                            </item>
+
+                            <item name="Extend_Warranty/js/tracking-service__dependencies" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/tracking-service__dependencies
+                            </item>
+                            <item name="Extend_Warranty/js/tracking-service__component" xsi:type="string">
+                                Extend_Warranty/js/tracking-service
+                            </item>
+                            <item name="Extend_Warranty/js/tracking-service__register" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/tracking-service__register
+                            </item>
+
+                        </item>
+                    </item>
+                    <item name="product" xsi:type="array">
+                        <item name="items" xsi:type="array">
+                            <item name="simpleProductWarranty" xsi:type="string">
+                                Extend_Warranty/js/product/simple-warranty
+                            </item>
+                            <!-- <item name="simpleProductWarranty__register" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/product/simple-warranty__register
+                            </item> -->
+
+                        </item>
+                    </item>
+                </argument>
+            </arguments>
+        </referenceBlock>
+    </body>
+</page>
