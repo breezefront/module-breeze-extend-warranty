@@ -9,11 +9,8 @@
                         <item name="items" xsi:type="array">
 
                             <item name="extendWarrantyOffers" xsi:type="string">
-                                Extend_Warranty/js/warranty-offers-base
+                                Swissup_BreezeExtendWarranty/js/warranty-offers-base
                             </item>
-                            <!-- <item name="extendWarrantyOffers__register" xsi:type="string">
-                                Swissup_BreezeExtendWarranty/js/warranty-offers-base__register
-                            </item> -->
 
                             <item name="Extend_Warranty/js/sidebar-mixin" xsi:type="string">
                                 Swissup_BreezeExtendWarranty/js/sidebar-mixin
@@ -40,6 +37,10 @@
                                 Swissup_BreezeExtendWarranty/js/tracking-service__register
                             </item>
 
+                            <item name="Extend_Warranty/js/view/minicart-mixin" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/view/minicart-mixin
+                            </item>
+
                         </item>
                     </item>
                     <item name="product" xsi:type="array">
@@ -47,9 +48,9 @@
                             <item name="simpleProductWarranty" xsi:type="string">
                                 Extend_Warranty/js/product/simple-warranty
                             </item>
-                            <!-- <item name="simpleProductWarranty__register" xsi:type="string">
-                                Swissup_BreezeExtendWarranty/js/product/simple-warranty__register
-                            </item> -->
+                            <item name="simpleProductWarranty__register" xsi:type="string">
+                                Swissup_BreezeExtendWarranty/js/product/simple-warranty__mount
+                            </item>
 
                         </item>
                     </item>

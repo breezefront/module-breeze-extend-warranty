@@ -61,17 +61,19 @@ define([
                 /** @inheritdoc */
                 complete: function () {
                     $(document.body).trigger('processStop');
+                },
+
+                success: function (response) {
+                    if (response.status) {
+                        this._onAddToCartSuccess(response);
+                    } else {
+                        this._onAddToCartError(response.error);
+                    }
+                },
+
+                error: function (xhr, status, error) {
+                    this._onAddToCartError($t('Sorry, there has been an error processing your request. Please try again or contact our support.'));
                 }
-            })
-            .done(function (response) {
-                if (response.status) {
-                    this._onAddToCartSuccess(response);
-                } else {
-                    this._onAddToCartError(response.error);
-                }
-            })
-            .fail(function (xhr, status, error) {
-                this._onAddToCartError($t('Sorry, there has been an error processing your request. Please try again or contact our support.'));
             });
         },
 
@@ -91,13 +93,14 @@ define([
                 $(document).trigger('ajax:' + this.options.addToCartEvent);
             }
 
-            if (this.options.isInCartPage) {
-                // reload Cart page
-                window.location.reload(false);
-            } else {
-                // reload Customer cart data
-                customerData.reload(['cart'], false);
-            }
+            // if (this.options.isInCartPage) {
+            //     // reload Cart page
+            //     window.location.reload(false);
+            // } else {
+            //     // reload Customer cart data
+            //     customerData.reload(['cart'], false);
+            // }
+            customerData.reload(['cart'], false);
         },
 
         /**
